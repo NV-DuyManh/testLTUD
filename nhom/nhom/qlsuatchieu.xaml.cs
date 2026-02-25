@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Data.Entity;
@@ -184,3 +185,32 @@ namespace nhom
         }
     }
 }
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace nhom
+{
+    /// <summary>
+    /// Interaction logic for qlsuatchieu.xaml
+    /// </summary>
+    public partial class qlsuatchieu : Window
+    {
+        public qlsuatchieu()
+        {
+            InitializeComponent();
+        }
+    }
+}
+>>>>>>> c898da8ee5117cce46ff0aaf33aa0fe66dde8ab8

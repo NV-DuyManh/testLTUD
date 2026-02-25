@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<Window x:Class="nhom.qlsuatchieu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -131,3 +132,126 @@
         </Grid>
     </Grid>
 </Window>
+=======
+﻿<Window x:Class="nhom.qlsuatchieu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:nhom"
+        mc:Ignorable="d"
+        Title="Quản lý suất chiếu" Height="600" Width="1000" Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="White">
+            <Border BorderBrush="LightGray" BorderThickness="0,0,0,1"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0">
+                <TextBlock Text="☰" Foreground="Black" FontSize="20" VerticalAlignment="Center" Margin="0,0,15,0"/>
+
+                <Grid Margin="0,0,10,0">
+                    <TextBlock Text="Quản lý suất chiếu" Foreground="Black" FontSize="16" VerticalAlignment="Center"/>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0">
+                <TextBlock Text="⋮" Foreground="Black" FontSize="20" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Background="White">
+                <Grid Height="40">
+                    <TextBlock Text="Toàn bộ" Foreground="Black" FontWeight="Bold" VerticalAlignment="Center" Margin="15,0,0,0"/>
+                </Grid>
+
+                <TextBlock Text="Phòng 1" Padding="15,10" Foreground="Black"/>
+                <TextBlock Text="Phòng 2" Padding="15,10" Foreground="Black"/>
+                <TextBlock Text="Phòng 3" Padding="15,10" Foreground="Black"/>
+                <TextBlock Text="Phòng 4" Padding="15,10" Foreground="Black"/>
+                <TextBlock Text="Phòng 5" Padding="15,10" Foreground="Black"/>
+            </StackPanel>
+
+            <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness="0,0,1,0" HorizontalAlignment="Right" Width="1"/>
+
+            <Grid Grid.Column="1" Background="White" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBox Text="Tìm kiếm" Width="200" Padding="5"/>
+                        <Button Content="+ Thêm" Background="White" Foreground="Black" BorderBrush="Black" BorderThickness="1" Padding="15,5" Margin="20,0,0,0"/>
+                    </StackPanel>
+
+                    <DatePicker Grid.Column="1" Width="120" VerticalAlignment="Center"/>
+                </Grid>
+
+                <DataGrid Grid.Row="1" x:Name="dtgSuatChieu" 
+                          AutoGenerateColumns="False" CanUserAddRows="False" 
+                          BorderThickness="1" BorderBrush="LightGray" HeadersVisibility="Column" RowHeight="40"
+                          GridLinesVisibility="All" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray"
+                          Background="White">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Tên phim" Binding="{Binding TenPhim}" Width="2*"/>
+                        <DataGridTextColumn Header="Loại phim" Binding="{Binding Loai}" Width="80"/>
+                        <DataGridTextColumn Header="Thời lượng" Binding="{Binding ThoiLuong}" Width="80"/>
+
+                        <DataGridTemplateColumn Header="Giờ chiếu" Width="2*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding GioChieu}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border Background="White" BorderBrush="Black" BorderThickness="1" CornerRadius="2" Margin="0,0,10,0" Padding="5,2">
+                                                    <TextBlock Text="{Binding}" FontSize="12"/>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Width="50">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Background="Transparent" BorderThickness="0">
+                                        <TextBlock Text="✎" FontSize="14"/>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <TextBlock Grid.Row="2" Text="Kết quả: 5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black" FontSize="12"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+>>>>>>> c898da8ee5117cce46ff0aaf33aa0fe66dde8ab8
