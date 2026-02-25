@@ -1,0 +1,17 @@
+F:\Group6\Group6\Group6\obj\Debug\Group6.csprojAssemblyReference.cache
+F:\Group6\Group6\Group6\obj\Debug\dangnhap.g.cs
+F:\Group6\Group6\Group6\obj\Debug\MainWindow.g.cs
+F:\Group6\Group6\Group6\obj\Debug\App.g.cs
+F:\Group6\Group6\Group6\obj\Debug\Group6_MarkupCompile.cache
+F:\Group6\Group6\Group6\obj\Debug\Group6_MarkupCompile.lref
+F:\Group6\Group6\Group6\bin\Debug\Group6.exe.config
+F:\Group6\Group6\Group6\bin\Debug\Group6.exe
+F:\Group6\Group6\Group6\bin\Debug\Group6.pdb
+F:\Group6\Group6\Group6\obj\Debug\dangnhap.baml
+F:\Group6\Group6\Group6\obj\Debug\MainWindow.baml
+F:\Group6\Group6\Group6\obj\Debug\Group6.g.resources
+F:\Group6\Group6\Group6\obj\Debug\Group6.Properties.Resources.resources
+F:\Group6\Group6\Group6\obj\Debug\Group6.csproj.GenerateResource.cache
+F:\Group6\Group6\Group6\obj\Debug\Group6.csproj.CoreCompileInputs.cache
+F:\Group6\Group6\Group6\obj\Debug\Group6.exe
+F:\Group6\Group6\Group6\obj\Debug\Group6.pdb
