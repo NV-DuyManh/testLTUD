@@ -1,0 +1,82 @@
+﻿<Window x:Class="Group6.qlnhansu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Group6"
+        mc:Ignorable="d"
+    Title="Quản lý nhân sự" Height="508.4" Width="800" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Column="0" Margin="0,0,10,0">
+            <GroupBox.Header>
+                <TextBlock Text="Thông tin nhân viên" FontWeight="Bold"/>
+            </GroupBox.Header>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="10">
+
+                    <Label Content="Mã nhân viên:"/>
+                    <TextBox x:Name="txtMaNV" IsReadOnly="True" Background="#EEE" Padding="5"/>
+
+                    <Label Content="Họ và tên:" Margin="0,5,0,0"/>
+                    <TextBox x:Name="txtHoTen" Padding="5"/>
+
+                    <Label Content="Số điện thoại:" Margin="0,5,0,0"/>
+                    <TextBox x:Name="txtSDT" Padding="5"/>
+
+                    <Label Content="Căn cước công dân:" Margin="0,5,0,0"/>
+                    <TextBox x:Name="txtCCCD" Padding="5"/>
+
+                    <Label Content="Chức vụ:" Margin="0,5,0,0"/>
+                    <ComboBox x:Name="cmbChucVu" Padding="5">
+                        <ComboBoxItem Content="Thu ngân" IsSelected="True"/>
+                        <ComboBoxItem Content="Soát vé"/>
+                        <ComboBoxItem Content="Kỹ thuật phòng chiếu"/>
+                        <ComboBoxItem Content="Quản lý rạp"/>
+                    </ComboBox>
+
+                    <Label Content="Trạng thái:" Margin="0,5,0,0"/>
+                    <ComboBox x:Name="cmbTrangThai" Padding="5">
+                        <ComboBoxItem Content="Đang làm việc" IsSelected="True"/>
+                        <ComboBoxItem Content="Đã nghỉ việc"/>
+                    </ComboBox>
+
+                    <WrapPanel HorizontalAlignment="Center" Margin="0,15,0,0">
+                        <Button x:Name="btnThem" Content="Thêm" Width="55" Margin="5" Padding="5"/>
+                        <Button x:Name="btnSua" Content="Sửa" Width="55" Margin="5" Padding="5"/>
+                        <Button x:Name="btnXoa" Content="Xóa" Width="55" Margin="5" Padding="5"/>
+                        <Button x:Name="btnLamMoi" Content="Làm mới" Width="186" Margin="5" Padding="5"/>
+                    </WrapPanel>
+
+                </StackPanel>
+            </ScrollViewer>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1">
+            <GroupBox.Header>
+                <TextBlock Text="Danh sách nhân sự" FontWeight="Bold"/>
+            </GroupBox.Header>
+
+            <DataGrid x:Name="dgNhansu" Margin="5" 
+                      AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
+                      BorderThickness="1" BorderBrush="LightGray"
+                      GridLinesVisibility="All" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã NV" Binding="{Binding MaNV}" Width="60"/>
+                    <DataGridTextColumn Header="Họ và Tên" Binding="{Binding HoTen}" Width="*"/>
+                    <DataGridTextColumn Header="Số ĐT" Binding="{Binding SDT}" Width="90"/>
+                    <DataGridTextColumn Header="Chức vụ" Binding="{Binding ChucVu}" Width="100"/>
+                    <DataGridTextColumn Header="Trạng thái" Binding="{Binding TrangThai}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+    </Grid>
+</Window>
