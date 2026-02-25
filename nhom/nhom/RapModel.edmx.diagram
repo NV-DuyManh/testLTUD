@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3bf1f45fe9714028a6b51f979e14503d" Name="Diagram1">
+        <EntityTypeShape EntityType="rapDatabaseModel.ghe" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="rapDatabaseModel.lichchieu" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rapDatabaseModel.nguoidung" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="rapDatabaseModel.phim" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="rapDatabaseModel.phongchieu" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="rapDatabaseModel.sanpham" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="rapDatabaseModel.theloai" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Ghe_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Lich_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Lich_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Lich_User" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Phim_User" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Phong_User" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_SanPham_User" ManuallyRouted="false" />
+        <AssociationConnector Association="rapDatabaseModel.FK_Phim_TheLoai" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
